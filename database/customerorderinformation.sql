@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: localhost
--- Létrehozás ideje: 2019. Dec 07. 19:54
+-- Létrehozás ideje: 2019. Dec 07. 20:51
 -- Kiszolgáló verziója: 10.4.8-MariaDB
 -- PHP verzió: 7.3.10
 
@@ -53,11 +53,11 @@ CREATE TABLE `customerorder` (
 -- --------------------------------------------------------
 
 --
--- Tábla szerkezet ehhez a táblához `orderitem`
+-- Tábla szerkezet ehhez a táblához `product`
 --
 
-CREATE TABLE `orderitem` (
-  `catalogID` int(11) NOT NULL,
+CREATE TABLE `product` (
+  `productID` int(11) NOT NULL,
   `orderID` int(30) NOT NULL,
   `amount` int(11) NOT NULL,
   `color` varchar(50) COLLATE utf8mb4_hungarian_ci NOT NULL,
@@ -95,10 +95,10 @@ ALTER TABLE `customerorder`
   ADD KEY `vasarloID` (`customerID`);
 
 --
--- A tábla indexei `orderitem`
+-- A tábla indexei `product`
 --
-ALTER TABLE `orderitem`
-  ADD PRIMARY KEY (`catalogID`,`orderID`),
+ALTER TABLE `product`
+  ADD PRIMARY KEY (`productID`,`orderID`),
   ADD KEY `rendelesID` (`orderID`);
 
 --
@@ -124,10 +124,10 @@ ALTER TABLE `customerorder`
   MODIFY `orderID` int(30) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT a táblához `orderitem`
+-- AUTO_INCREMENT a táblához `product`
 --
-ALTER TABLE `orderitem`
-  MODIFY `catalogID` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `product`
+  MODIFY `productID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT a táblához `users`
@@ -146,10 +146,10 @@ ALTER TABLE `customerorder`
   ADD CONSTRAINT `customerorder_ibfk_1` FOREIGN KEY (`customerID`) REFERENCES `customer` (`customerID`);
 
 --
--- Megkötések a táblához `orderitem`
+-- Megkötések a táblához `product`
 --
-ALTER TABLE `orderitem`
-  ADD CONSTRAINT `orderitem_ibfk_1` FOREIGN KEY (`orderID`) REFERENCES `customerorder` (`orderID`);
+ALTER TABLE `product`
+  ADD CONSTRAINT `product_ibfk_1` FOREIGN KEY (`orderID`) REFERENCES `customerorder` (`orderID`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
