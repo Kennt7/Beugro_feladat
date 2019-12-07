@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: localhost
--- Létrehozás ideje: 2019. Dec 07. 18:29
+-- Létrehozás ideje: 2019. Dec 07. 19:54
 -- Kiszolgáló verziója: 10.4.8-MariaDB
 -- PHP verzió: 7.3.10
 
@@ -73,7 +73,8 @@ CREATE TABLE `orderitem` (
 CREATE TABLE `users` (
   `userID` int(11) NOT NULL,
   `username` varchar(50) COLLATE utf8mb4_hungarian_ci NOT NULL,
-  `password` varchar(50) COLLATE utf8mb4_hungarian_ci NOT NULL
+  `password` varchar(50) COLLATE utf8mb4_hungarian_ci NOT NULL,
+  `password2` varchar(50) COLLATE utf8mb4_hungarian_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_hungarian_ci;
 
 --
