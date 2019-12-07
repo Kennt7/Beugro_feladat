@@ -1,0 +1,23 @@
+body{
+    
+    background-color: grey;
+}
+
+
+
+.container{
+    
+    color:azure;
+    margin: 20px auto 20px auto;
+    padding:20px;
+    width:50%;
+    border: 2px solid black;
+    text-align:center;
+    background-color:black;
+}
+
+
+
+
+
+
