@@ -19,7 +19,8 @@
                 <b>Password:</b><br />
                 <input type="text" name="password"><br />
                 <b>Repassword:</b><br />
-                <input type="text" name="password2"><br />              
+                <input type="text" name="password2"><br /><br />   
+                <input value="registration" type="submit" name="submit">
             </form>
         </div>
 	</body>
