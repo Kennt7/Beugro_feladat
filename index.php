@@ -1,6 +1,6 @@
 
 <?php header("Content-Type: text/html; charset=UTF-8"); ?>
-<?php require_once("adb_kat.inc.php")?>
+<?php require_once("adb_kat.php")?>
 <html>
     <meta name="author" content="Nagy Zoltán">
 	<head>

@@ -13,13 +13,13 @@
         <h1>Login</h1>
         <div class="container">
             
-            <form action="register.php" method="post">           
+            <form action="logincheck.php" method="post">           
                 <b>Username:</b><br />
                 <input type="text" name="username"><br />
                 <b>Password:</b><br />
-                <input type="text" name="password"><br />
+                <input type="password" name="password"><br />
                 <b>Repassword:</b><br />
-                <input type="text" name="password2"><br /><br />   
+                <input type="password" name="password2"><br /><br />   
                 <input value="registration" type="submit" name="submit">
             </form>
         </div>

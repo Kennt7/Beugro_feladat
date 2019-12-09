@@ -13,9 +13,10 @@ body{
     text-align:center;
     margin:auto;
     border: 5px dotted black;
-    width:50%;
+    width:20%;
     height:200px;
     padding: 10px 10px 10px 10px;
+    background-color:black;
     
 }
 
@@ -27,27 +28,27 @@ body{
 #create{
     background-color:green;
     padding: 5px 5px 5px 5px;
-    border: 2px solid black;
+    border: 2px solid grey;
     width: 70px;
 }
 #read{
     background-color:deepskyblue;
     padding: 5px 5px 5px 5px;
-    border: 2px solid black;
+    border: 2px solid grey;
     width: 70px;
 }
 
 #update{
     background-color:sienna;
     padding: 5px 5px 5px 5px;
-    border: 2px solid black;
+    border: 2px solid grey;
     width: 70px;
 }
 
 #delete{
     background-color:red;
     padding: 5px 5px 5px 5px;
-    border: 2px solid black;
+    border: 2px solid grey;
     width: 70px;
 }
 
