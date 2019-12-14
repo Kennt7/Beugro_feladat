@@ -11,6 +11,14 @@ header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers
 
 require_once("adb_kat.php");
 
+$db_object = new Dbase();
+
+$connection = $db_object->connect();
+
+
+$data = json_decode(file_get_contents("php://input"));
+
+$msg['message'] = '';
 
 
 
