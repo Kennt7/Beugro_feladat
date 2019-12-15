@@ -20,9 +20,34 @@ $data = json_decode(file_get_contents("php://input"));
 
 $msg['message'] = '';
 
+if(isset($data->amount) && isset($data->color) && !emptz($data->price)){
+    
+    //check data value is emptz or not
+    if(!empty($data->amount) && !empty($data->color) && !empty($data->price)){
+        
+        $insertquery = "INSERT INTO 'product'(amount,color,price) VALUES(:amount,:color,:price)";
+        
+        $insertcommand = $connection->prepare($insertquery);
+        //bindin data
+        
+        $insertcommand->bindValue(':amount',htmlspecialchars(strip_tags($data->amount)),PDO::PARAM_STR);
+        $insertcommand->bindValue(':color',htmlspecialchars(strip_tags($data->amount)),PDO::PARAM_STR);
+        $insertcommand->bindValue(':price',htmlspecialchars(strip_tags($data->amount)),PDO::PARAM_STR);
+        
+        if($insertcommand->execute()){
+            $msg['message'] = 'data insert ok!';
+        }else{
+            $msg['message'] = 'datat insert not ok!!!';
+        }
+    }else{
+        $msg['message'] = 'emptz field detected! Please fill all fileds!';
+    }
+}else{
+    $msg['message'] = 'Please fill, all fields | amount, color, price'
+}
 
 
-
+echo json_encode($msg);
 
 
 
