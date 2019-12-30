@@ -11,6 +11,8 @@ header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers
 
 require_once("adb_kat.php");
 
+function createFunction (){
+
 $db_object = new Dbase();
 
 $connection = $db_object->connect();
@@ -36,18 +38,21 @@ if(isset($data->amount) && isset($data->color) && !emptz($data->price)){
         
         if($insertcommand->execute()){
             $msg['message'] = 'data insert ok!';
-        }else{
+        }
+        else{
             $msg['message'] = 'datat insert not ok!!!';
         }
-    }else{
-        $msg['message'] = 'emptz field detected! Please fill all fileds!';
     }
-}else{
-    $msg['message'] = 'Please fill, all fields | amount, color, price'
+    else{
+        $msg['message'] = 'empty field detected! Please fill all fields!';
+    }
+}
+else{
+    $msg['message'] = 'Please fill, all fields | amount, color, price';
+}
+echo json_encode($msg);
 }
 
-
-echo json_encode($msg);
 
 
 
