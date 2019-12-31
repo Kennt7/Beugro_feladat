@@ -43,7 +43,7 @@ if(isset($data->productID)){
         $product_color = isset($data->color) ? $data->color : $row['color'];
         $product_price = isset($data->price) ? $data->price : $row['price'];
 
-        $update_query = "UPDATE 'product' SET amount = :amount, color = :color, price = :color WHERE productID = :prouductID";
+        $update_query = "UPDATE 'product' SET amount = :amount, color = :color, price = :color WHERE productID = :productID";
 
         $update_statement = $connection-prepare($update_query);
 
