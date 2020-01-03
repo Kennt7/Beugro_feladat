@@ -54,7 +54,7 @@ if(isset($data->productID)){
         $update_statement->bindValue(':orderID',$order_id,PDO::PARAM_INT);
 
         if($update_statement->execute()){
-            $msg = ['message'] = 'Data updated done!';
+            $msg['message'] = 'Data updated done!';
         }
         else{
             $msg['message'] = 'data not updated!!!';
