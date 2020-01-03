@@ -1,0 +1,175 @@
+body {
+    background: #fff;
+    font-family: "Open Sans", sans-serif;
+}
+
+/* TOPBAR CONTACT NAVIGATION */
+nav.top-contact-navigation {
+    background: green;
+    padding: 5px 0;
+    text-align: right;
+}
+
+nav.top-contact-navigation ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-size: 13px;
+}
+
+nav.top-contact-navigation ul li {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+nav.top-contact-navigation ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav.top-contact-navigation ul li a:hover {
+    text-decoration: underline;
+}
+
+nav.top-contact-navigation ul li a img {
+    margin-right: 5px;
+}
+
+/* PRIMARY NAVBAR */
+.navbar {
+    background: #0275d8;
+}
+
+.navbar .dropdown-menu {
+    background: #0275d8;
+    border: 0;
+    border-radius: 0;
+    margin: 0
+}
+
+.navbar .dropdown-menu .dropdown-item:hover {
+    background: transparent;
+}
+
+.navbar .dropdown-menu .dropdown-item {
+    color: #fff;
+}
+
+.navbar .container {
+    margin: 0;
+}
+
+@media (min-width: 576px) {
+    .navbar .container {
+        margin: 0 auto;
+    }
+}
+
+.navbar-toggler {
+    border: 2px solid #fff;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.navbar .nav-link,
+.navbar .navbar-brand {
+    color: white;
+}
+
+.navbar-toggleable-md .navbar-nav .nav-link.last-item {
+    padding-right: 0;
+}
+
+.navbar .navbar-brand img {
+    vertical-align: baseline;
+}
+
+.navbar .dropdown-menu {
+    top: 50px;
+}
+
+
+/* FOOTER */
+footer {
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    footer {
+        text-align: left;
+    }
+}
+
+footer [class*="col-"] {
+    margin-bottom: 20px;
+}
+
+.m-footer-contact .navbar-brand {
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.m-footer-contact .navbar-brand img {
+    vertical-align: baseline;
+}
+
+.m-social-media ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.m-social-media ul li {
+    display: inline-block;
+    padding: 0 20px;
+    text-align: center;
+}
+
+@media (min-width: 576px) {
+    .m-social-media ul li {
+        padding: 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    .m-social-media ul li {
+        padding: 0 20px;
+    }
+}
+
+.m-social-media ul li a {
+    background: #000;
+    border-radius: 50%;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    width: 40px;
+}
+
+.m-footer-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.m-footer-nav ul a {
+    color: #292b2c;
+}
+
+/******************************************************************
+DEFAULTS
+******************************************************************/
+
+.gray-bg {
+    background: #dedede;
+}
+
+section, footer {
+    padding: 20px 0;
+}
+
+
+
+
